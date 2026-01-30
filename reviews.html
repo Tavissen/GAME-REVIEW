@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Game Reviews</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .review-section {
+            padding: 60px 0;
+        }
+        
+        .review-card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .score-badge {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .review-header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        
+        .pros-cons {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .pros-cons ul {
+            padding-left: 20px;
+        }
+        
+        .pros-cons li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-brand">🎮 Game Reviews</a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="games.html" class="nav-link">Games</a>
+                    <a href="reviews.html" class="nav-link active">Reviews</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="signup.html" class="nav-link">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" style="background: linear-gradient(135deg, #6f42c1 0%, #a370f7 100%);">
+        <div class="container">
+            <h1>Game Reviews</h1>
+            <p>Detailed analysis of games we've reviewed</p>
+        </div>
+    </section>
+
+    <section class="review-section">
+        <div class="container">
+            <article id="elden" class="review-card">
+                <div class="review-header">
+                    <img src="https://via.placeholder.com/100/007bff/ffffff?text=ER" alt="Elden Ring">
+                    <div>
+                        <h2>Elden Ring</h2>
+                        <p>FromSoftware • 2022 • Action RPG</p>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <span class="score-badge" style="background: #007bff;">Graphics: 9/10</span>
+                    <span class="score-badge" style="background: #28a745;">Gameplay: 10/10</span>
+                    <span class="score-badge" style="background: #6f42c1;">Story: 9/10</span>
+                    <span class="score-badge" style="background: #333;">Overall: 9.3/10</span>
+                </div>
+                
+                <h3 class="mb-3">The Review</h3>
+                <p class="mb-3">
+                    Elden Ring is a masterpiece that combines challenging combat with an incredibly detailed open world. 
+                    The Lands Between is filled with secrets, epic bosses, and breathtaking landscapes.
+                </p>
+                
+                <div class="pros-cons">
+                    <h4 class="mb-2">Pros & Cons</h4>
+                    <div class="grid grid-2">
+                        <div>
+                            <h5 style="color: #28a745;">✅ Strengths</h5>
+                            <ul>
+                                <li>Massive open world</li>
+                                <li>Satisfying combat</li>
+                                <li>Beautiful visuals</li>
+                                <li>Deep lore</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 style="color: #dc3545;">❌ Weaknesses</h5>
+                            <ul>
+                                <li>Very difficult</li>
+                                <li>Limited guidance</li>
+                                <li>Performance issues on PC</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <h4 class="mt-4">Verdict</h4>
+                <p style="padding: 15px; background: #e7f5ff; border-left: 4px solid #007bff; border-radius: 4px;">
+                    ⭐⭐⭐⭐⭐ A must-play for any serious gamer. One of the best games ever made.
+                </p>
+            </article>
+
+            <article id="hogwarts" class="review-card">
+                <div class="review-header">
+                    <img src="https://via.placeholder.com/100/28a745/ffffff?text=HL" alt="Hogwarts Legacy">
+                    <div>
+                        <h2>Hogwarts Legacy</h2>
+                        <p>Avalanche Software • 2023 • RPG</p>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <span class="score-badge" style="background: #007bff;">Graphics: 9/10</span>
+                    <span class="score-badge" style="background: #28a745;">Gameplay: 8/10</span>
+                    <span class="score-badge" style="background: #6f42c1;">Story: 9/10</span>
+                    <span class="score-badge" style="background: #333;">Overall: 8.7/10</span>
+                </div>
+                
+                <h3 class="mb-3">Magical Adventure</h3>
+                <p class="mb-3">
+                    Hogwarts Legacy delivers the magical school experience Harry Potter fans have dreamed of. 
+                    The castle is beautifully detailed, and the spellcasting combat is surprisingly deep.
+                </p>
+                
+                <div class="pros-cons">
+                    <h4 class="mb-2">What We Liked</h4>
+                    <ul>
+                        <li>Beautiful Hogwarts recreation</li>
+                        <li>Fun spell-based combat</li>
+                        <li>Great voice acting</li>
+                        <li>Interesting side quests</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article id="cyberpunk" class="review-card">
+                <div class="review-header">
+                    <img src="https://via.placeholder.com/100/ffc107/ffffff?text=CP" alt="Cyberpunk 2077">
+                    <div>
+                        <h2>Cyberpunk 2077</h2>
+                        <p>CD Projekt Red • 2020 • Action RPG</p>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <span class="score-badge" style="background: #007bff;">Graphics: 10/10</span>
+                    <span class="score-badge" style="background: #28a745;">Gameplay: 8/10</span>
+                    <span class="score-badge" style="background: #6f42c1;">Story: 8/10</span>
+                    <span class="score-badge" style="background: #333;">Overall: 8.7/10</span>
+                </div>
+                
+                <h3 class="mb-3">Futuristic Adventure</h3>
+                <p class="mb-3">
+                    Cyberpunk 2077 has come a long way since its rocky launch. Night City is one of the most 
+                    detailed and immersive game worlds ever created, with stunning visuals and an engaging story.
+                </p>
+                
+                <h4>Update Review (2024)</h4>
+                <p>
+                    After numerous updates and the Phantom Liberty expansion, Cyberpunk 2077 is now the game 
+                    it was always meant to be. The technical issues have been largely fixed, and the gameplay 
+                    has been significantly improved.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-3">
+                <div>
+                    <h3>Game Reviews</h3>
+                    <p>Simple, honest reviews for gamers</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="index.html" style="color: white;">Home</a></li>
+                        <li><a href="games.html" style="color: white;">Games</a></li>
+                        <li><a href="reviews.html" style="color: white;">Reviews</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p>Email: contact@gamereviews.com</p>
+                    <p>© 2024 Game Reviews</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

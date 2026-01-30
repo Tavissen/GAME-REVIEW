@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Game Reviews</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .signup-container {
+            max-width: 500px;
+            margin: 80px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .error-message {
+            color: #dc3545;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .checkbox-group {
+            margin: 20px 0;
+        }
+        
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-brand">🎮 Game Reviews</a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="games.html" class="nav-link">Games</a>
+                    <a href="reviews.html" class="nav-link">Reviews</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="signup.html" class="nav-link active">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="signup-container">
+            <h2 class="text-center mb-4">Create Account</h2>
+            
+            <form id="signupForm" onsubmit="return validateForm()">
+                <div class="mb-3">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    <div id="nameError" class="error-message">Name must be at least 2 characters</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    <div id="emailError" class="error-message">Please enter a valid email</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Create a password">
+                    <div id="passwordError" class="error-message">Password must be at least 6 characters</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Favorite Platform</label>
+                    <select class="form-control" id="platform">
+                        <option value="">Select your platform</option>
+                        <option value="pc">PC</option>
+                        <option value="ps5">PlayStation 5</option>
+                        <option value="xbox">Xbox Series X</option>
+                        <option value="switch">Nintendo Switch</option>
+                    </select>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Experience Level</label>
+                    <div>
+                        <label style="display: block; margin-bottom: 8px;">
+                            <input type="radio" name="experience" value="beginner"> Beginner Gamer
+                        </label>
+                        <label style="display: block; margin-bottom: 8px;">
+                            <input type="radio" name="experience" value="intermediate"> Intermediate
+                        </label>
+                        <label style="display: block;">
+                            <input type="radio" name="experience" value="expert"> Expert Gamer
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="checkbox-group">
+                    <label class="form-label">Favorite Genres</label>
+                    <label>
+                        <input type="checkbox" value="rpg"> RPG
+                    </label>
+                    <label>
+                        <input type="checkbox" value="action"> Action
+                    </label>
+                    <label>
+                        <input type="checkbox" value="fps"> FPS
+                    </label>
+                    <label>
+                        <input type="checkbox" value="strategy"> Strategy
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn" style="width: 100%;">Create Account</button>
+            </form>
+            
+            <p class="text-center mt-3">
+                Already have an account? <a href="#">Sign In</a>
+            </p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="text-center">
+                <h3>Game Reviews</h3>
+                <p>Simple, honest reviews for gamers</p>
+                <p>© 2024 Game Reviews</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function validateForm() {
+            let isValid = true;
+            
+            const name = document.getElementById('name').value;
+            if (name.length < 2) {
+                document.getElementById('nameError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('nameError').style.display = 'none';
+            }
+            
+            const email = document.getElementById('email').value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById('emailError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('emailError').style.display = 'none';
+            }
+            
+            const password = document.getElementById('password').value;
+            if (password.length < 6) {
+                document.getElementById('passwordError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('passwordError').style.display = 'none';
+            }
+            
+            if (isValid) {
+                alert('Account created successfully!');
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

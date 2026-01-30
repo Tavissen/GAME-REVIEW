@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Reviews - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .featured {
+            padding: 60px 0;
+        }
+        
+        .calculator {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        
+        .star {
+            color: gold;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-brand">🎮 Game Reviews</a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="games.html" class="nav-link">Games</a>
+                    <a href="reviews.html" class="nav-link">Reviews</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="signup.html" class="nav-link">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Honest Game Reviews</h1>
+            <p>Find the best games with our simple, honest reviews</p>
+            <a href="#featured" class="btn">Browse Games</a>
+        </div>
+    </section>
+
+    <section id="featured" class="featured">
+        <div class="container">
+            <h2 class="text-center mb-4">Top Rated Games</h2>
+            <div class="grid grid-3">
+                <div class="game-card">
+                    <img src="https://via.placeholder.com/400x250/007bff/ffffff?text=Elden+Ring" alt="Elden Ring">
+                    <div class="card-body">
+                        <h3>Elden Ring</h3>
+                        <div class="rating mb-2">★★★★★</div>
+                        <p>Open world action RPG</p>
+                        <a href="reviews.html#elden" class="btn btn-outline mt-2">Read Review</a>
+                    </div>
+                </div>
+                
+                <div class="game-card">
+                    <img src="https://via.placeholder.com/400x250/28a745/ffffff?text=Hogwarts+Legacy" alt="Hogwarts Legacy">
+                    <div class="card-body">
+                        <h3>Hogwarts Legacy</h3>
+                        <div class="rating mb-2">★★★★☆</div>
+                        <p>Harry Potter RPG adventure</p>
+                        <a href="reviews.html#hogwarts" class="btn btn-outline mt-2">Read Review</a>
+                    </div>
+                </div>
+                
+                
+                <div class="game-card">
+                    <img src="https://via.placeholder.com/400x250/ffc107/ffffff?text=Cyberpunk+2077" alt="Cyberpunk 2077">
+                    <div class="card-body">
+                        <h3>Cyberpunk 2077</h3>
+                        <div class="rating mb-2">★★★★☆</div>
+                        <p>Futuristic open world RPG</p>
+                        <a href="reviews.html#cyberpunk" class="btn btn-outline mt-2">Read Review</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="calculator">
+        <div class="container">
+            <h2 class="text-center mb-4">Game Rating Calculator</h2>
+            <div class="grid grid-3">
+                <div>
+                    <label class="form-label">Graphics (1-10)</label>
+                    <input type="number" id="graphics" class="form-control" min="1" max="10" value="8">
+                </div>
+                <div>
+                    <label class="form-label">Gameplay (1-10)</label>
+                    <input type="number" id="gameplay" class="form-control" min="1" max="10" value="9">
+                </div>
+                <div>
+                    <label class="form-label">Story (1-10)</label>
+                    <input type="number" id="story" class="form-control" min="1" max="10" value="7">
+                </div>
+            </div>
+            <div class="text-center mt-4">
+               
+                <button onclick="calculateRating()" 
+                        style="background: #007bff; color: white; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer;">
+                    Calculate Average
+                </button>
+            </div>
+            <div id="result" class="mt-4 text-center" style="display: none;">
+                <h3>Average Score: <span id="score">0</span>/10</h3>
+                <p id="verdict"></p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="container mt-5">
+        <h2 class="text-center mb-4">Game Comparison</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Game</th>
+                    <th>Genre</th>
+                    <th>Graphics</th>
+                    <th>Gameplay</th>
+                    <th>Story</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Elden Ring</td>
+                    <td>RPG</td>
+                    <td>9/10</td>
+                    <td>10/10</td>
+                    <td>9/10</td>
+                </tr>
+                <tr>
+                    <td>Hogwarts Legacy</td>
+                    <td>RPG</td>
+                    <td>9/10</td>
+                    <td>8/10</td>
+                    <td>9/10</td>
+                </tr>
+                <tr>
+                    <td>Cyberpunk 2077</td>
+                    <td>RPG</td>
+                    <td>10/10</td>
+                    <td>8/10</td>
+                    <td>8/10</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-3">
+                <div>
+                    <h3>Game Reviews</h3>
+                    <p>Simple, honest reviews for gamers</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="index.html" style="color: white;">Home</a></li>
+                        <li><a href="games.html" style="color: white;">Games</a></li>
+                        <li><a href="reviews.html" style="color: white;">Reviews</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p>Email: contact@gamereviews.com</p>
+                    <p>© 2024 Game Reviews</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function calculateRating() {
+            const graphics = parseFloat(document.getElementById('graphics').value);
+            const gameplay = parseFloat(document.getElementById('gameplay').value);
+            const story = parseFloat(document.getElementById('story').value);
+            
+            const average = ((graphics + gameplay + story) / 3).toFixed(1);
+            
+            document.getElementById('score').textContent = average;
+            
+            let verdict = '';
+            if (average >= 9) verdict = '⭐ Masterpiece!';
+            else if (average >= 7) verdict = '👍 Great game';
+            else if (average >= 5) verdict = '😐 Average';
+            else verdict = '👎 Needs improvement';
+            
+            document.getElementById('verdict').textContent = verdict;
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

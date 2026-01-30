@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games - Game Reviews</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .filter-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        
+        .game-tag {
+            background: #e9ecef;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-right: 8px;
+        }
+        
+        .list-demo {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-brand">🎮 Game Reviews</a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="games.html" class="nav-link active">Games</a>
+                    <a href="reviews.html" class="nav-link">Reviews</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="signup.html" class="nav-link">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%);">
+        <div class="container">
+            <h1>Game Library</h1>
+            <p>Browse all our reviewed games</p>
+        </div>
+    </section>
+
+    <section class="filter-box">
+        <div class="container">
+            <h3 class="mb-3">Filter Games</h3>
+            <div class="grid grid-3">
+                <div>
+                    <label class="form-label">Genre</label>
+                    <select class="form-control">
+                        <option>All Genres</option>
+                        <option>RPG</option>
+                        <option>Action</option>
+                        <option>Adventure</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="form-label">Platform</label>
+                    <select class="form-control">
+                        <option>All Platforms</option>
+                        <option>PC</option>
+                        <option>PlayStation</option>
+                        <option>Xbox</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="form-label">Rating</label>
+                    <select class="form-control">
+                        <option>Any Rating</option>
+                        <option>5 Stars</option>
+                        <option>4+ Stars</option>
+                        <option>3+ Stars</option>
+                    </select>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <button class="btn">Apply Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="text-center mb-4">All Games</h2>
+        <div class="grid grid-3">
+            <div class="game-card">
+                <img src="https://via.placeholder.com/400x250/007bff/ffffff?text=Elden+Ring" alt="Elden Ring">
+                <div class="card-body">
+                    <h3>Elden Ring</h3>
+                    <div class="mb-2">
+                        <span class="game-tag">RPG</span>
+                        <span class="game-tag">Action</span>
+                        <span class="game-tag">PS5</span>
+                    </div>
+                    <div class="rating mb-2">★★★★★</div>
+                    <p>2022 • FromSoftware</p>
+                    <a href="reviews.html#elden" class="btn btn-outline mt-2">View Details</a>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <img src="https://via.placeholder.com/400x250/28a745/ffffff?text=Hogwarts+Legacy" alt="Hogwarts Legacy">
+                <div class="card-body">
+                    <h3>Hogwarts Legacy</h3>
+                    <div class="mb-2">
+                        <span class="game-tag">RPG</span>
+                        <span class="game-tag">Adventure</span>
+                        <span class="game-tag">PC</span>
+                    </div>
+                    <div class="rating mb-2">★★★★☆</div>
+                    <p>2023 • Avalanche Software</p>
+                    <a href="reviews.html#hogwarts" class="btn btn-outline mt-2">View Details</a>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <img src="https://via.placeholder.com/400x250/ffc107/ffffff?text=Cyberpunk+2077" alt="Cyberpunk 2077">
+                <div class="card-body">
+                    <h3>Cyberpunk 2077</h3>
+                    <div class="mb-2">
+                        <span class="game-tag">RPG</span>
+                        <span class="game-tag">Futuristic</span>
+                        <span class="game-tag">PC</span>
+                    </div>
+                    <div class="rating mb-2">★★★★☆</div>
+                    <p>2020 • CD Projekt Red</p>
+                    <a href="reviews.html#cyberpunk" class="btn btn-outline mt-2">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="list-demo">
+        <div class="container">
+            <h2 class="text-center mb-4">Game Genres & Rankings</h2>
+            <div class="grid grid-2">
+                <div>
+                    <h3>Popular Game Genres</h3>
+                    <ul>
+                        <li>Action</li>
+                        <li>RPG (Role Playing Game)
+                            <ul>
+                                <li>Action RPG</li>
+                                <li>MMORPG</li>
+                                <li>JRPG</li>
+                            </ul>
+                        </li>
+                        <li>FPS (First Person Shooter)</li>
+                        <li>Adventure</li>
+                        <li>Strategy</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Top 5 Games 2024</h3>
+                    <ol>
+                        <li>Elden Ring</li>
+                        <li>Hogwarts Legacy</li>
+                        <li>Baldur's Gate 3</li>
+                        <li>Cyberpunk 2077</li>
+                        <li>God of War Ragnarök</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-3">
+                <div>
+                    <h3>Game Reviews</h3>
+                    <p>Simple, honest reviews for gamers</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="index.html" style="color: white;">Home</a></li>
+                        <li><a href="games.html" style="color: white;">Games</a></li>
+                        <li><a href="reviews.html" style="color: white;">Reviews</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p>Email: contact@gamereviews.com</p>
+                    <p>© 2024 Game Reviews</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
